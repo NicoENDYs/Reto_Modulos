@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesador de Texto</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-3xl font-bold text-center mb-6">Procesador de Texto</h1>
+        
+        <div class="grid-forms">
+            <!-- Main Mega Texto Container -->
+            <div class="form-container main-text-container">
+                <h2 class="form-title">Mega Texto</h2>
+                <textarea name="MegaTexto" id="MegaTexto" placeholder="Ingrese su texto aquí..."></textarea>
+            </div>
+
+            <!-- Form 1: Calcular Longitud -->
+            <div class="form-container">
+                <h2 class="form-title">Calcular Longitud</h2>
+                <form action="">
+                    <div class="mb-4">
+                        <label for="Longitud" class="block mb-2">Resultado:</label>
+                        <div id="Longitud" class="result-label">0</div>
+                    </div>
+                    <button type="submit" id="Enviar">
+                        <i class="fas fa-spinner spinner"></i>
+                        Calcular
+                    </button>
+                </form>
+            </div>
+
+            <!-- Form 2: Caracter en posición específica -->
+            <div class="form-container">
+                <h2 class="form-title">Caracter en Posición</h2>
+                <form action="">
+                    <div class="mb-4">
+                        <label for="posicion" class="block mb-2">Posición a consultar 0 - max text</label>
+                        <input type="number" name="posicion" id="posicion" min="0" placeholder="Ej: 5">
+                    </div>
+                    <div class="mb-4">
+                        <label for="Caracter" class="block mb-2">Caracter encontrado:</label>
+                        <div id="Caracter" class="result-label">-</div>
+                    </div>
+                    <button type="submit" id="Enviar2">
+                        <i class="fas fa-spinner spinner"></i>
+                        Obtener Caracter
+                    </button>
+                </form>
+            </div>
+
+            <!-- Form 3: Verificar palabra -->
+            <div class="form-container">
+                <h2 class="form-title">Verificar Palabra</h2>
+                <form action="">
+                    <div class="mb-4">
+                        <label for="palabra" class="block mb-2">Palabra a buscar:</label>
+                        <input type="text" name="palabra" id="palabra" placeholder="Ej: ejemplo">
+                    </div>
+                    <div class="mb-4">
+                        <label for="ValPalabra" class="block mb-2">Resultado:</label>
+                        <div id="ValPalabra" class="result-label">-</div>
+                    </div>
+                    <button type="submit" id="Enviar3">
+                        <i class="fas fa-spinner spinner"></i>
+                        Verificar
+                    </button>
+                </form>
+            </div>
+
+            <!-- Form 4: Reemplazar palabra -->
+            <div class="form-container">
+                <h2 class="form-title">Reemplazar Palabra</h2>
+                <form action="">
+                    <div class="mb-4">
+                        <label for="palabra" class="block mb-2">Palabra a reemplazar:</label>
+                        <input type="text" name="palabra" id="palabra" placeholder="Ej: viejo">
+                    </div>
+                    <div class="mb-4">
+                        <label for="reemplazo" class="block mb-2">Reemplazar por:</label>
+                        <input type="text" name="reemplazo" id="reemplazo" placeholder="Ej: nuevo">
+                    </div>
+                    <div class="mb-4">
+                        <label for="TextoModificado" class="block mb-2">Texto modificado:</label>
+                        <textarea name="TextoModificado" id="TextoModificado" disabled readonly></textarea>
+                    </div>
+                    <button type="submit" id="Enviar4">
+                        <i class="fas fa-spinner spinner"></i>
+                        Reemplazar
+                    </button>
+                </form>
+            </div>
+
+            <!-- Form 5: Extraer porción de texto -->
+            <div class="form-container">
+                <h2 class="form-title">Extraer Porción de Texto</h2>
+                <form action="">
+                    <div class="mb-4">
+                        <label for="posicionI" class="block mb-2">Posición Inicial:</label>
+                        <input type="number" name="posicionI" id="posicionI" min="0" placeholder="Ej: 0">
+                    </div>
+                    <div class="mb-4">
+                        <label for="posicionF" class="block mb-2">Posición Final:</label>
+                        <input type="number" name="posicionF" id="posicionF" min="0" placeholder="Ej: 10">
+                    </div>
+                    <div class="mb-4">
+                        <label for="TextoExtraido" class="block mb-2">Texto extraído:</label>
+                        <textarea name="TextoExtraido" id="TextoExtraido" disabled readonly></textarea>
+                    </div>
+                    <button type="submit" id="Enviar5">
+                        <i class="fas fa-spinner spinner"></i>
+                        Extraer
+                    </button>
+                </form>
+            </div>
+        </div>
+        <script src="./megatexto.js" type="module"></script>
+</body>
+
+</html>
