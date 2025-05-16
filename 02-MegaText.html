@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Procesador de Texto</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./styles2.css">
@@ -64,10 +65,7 @@
                         <label for="palabra" class="block mb-2">Palabra a buscar:</label>
                         <input type="text" name="palabra" id="palabra" placeholder="Ej: ejemplo">
                     </div>
-                    <div class="mb-4">
-                        <label for="ValPalabra" class="block mb-2">Resultado:</label>
-                        <div id="ValPalabra" class="result-label">-</div>
-                    </div>
+                    
                     <button type="submit" id="Enviar3">
                         <i class="fas fa-spinner spinner"></i>
                         Verificar
@@ -81,11 +79,11 @@
                 <form action="">
                     <div class="mb-4">
                         <label for="palabra" class="block mb-2">Palabra a reemplazar:</label>
-                        <input type="text" name="palabra" id="palabra" placeholder="Ej: viejo">
+                        <input type="text" name="palabraOriginal" id="palabraOriginal" placeholder="Ej: viejo">
                     </div>
                     <div class="mb-4">
                         <label for="reemplazo" class="block mb-2">Reemplazar por:</label>
-                        <input type="text" name="reemplazo" id="reemplazo" placeholder="Ej: nuevo">
+                        <input type="text" name="nuevaPalabra" id="nuevaPalabra" placeholder="Ej: nuevo">
                     </div>
                     <div class="mb-4">
                         <label for="TextoModificado" class="block mb-2">Texto modificado:</label>
@@ -104,11 +102,11 @@
                 <form action="">
                     <div class="mb-4">
                         <label for="posicionI" class="block mb-2">Posición Inicial:</label>
-                        <input type="number" name="posicionI" id="posicionI" min="0" placeholder="Ej: 0">
+                        <input type="number" name="inicio" id="inicio" min="0" placeholder="Ej: 0">
                     </div>
                     <div class="mb-4">
                         <label for="posicionF" class="block mb-2">Posición Final:</label>
-                        <input type="number" name="posicionF" id="posicionF" min="0" placeholder="Ej: 10">
+                        <input type="number" name="fin" id="fin" min="0" placeholder="Ej: 10">
                     </div>
                     <div class="mb-4">
                         <label for="TextoExtraido" class="block mb-2">Texto extraído:</label>
