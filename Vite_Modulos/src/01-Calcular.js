@@ -1,3 +1,4 @@
+import './styles.css'
 import { Area, Diametro, Perimetro } from "./geometria.js";
 import { RArea, RDiagonal, RPerimetro } from "./geometria.js";
 import { TArea, TPerimetro, THipotenusa } from "./geometria.js";

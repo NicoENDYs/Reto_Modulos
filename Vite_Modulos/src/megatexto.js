@@ -1,4 +1,4 @@
-
+import './styles2.css'
 import { Longitud,Posicion,contienePalabra, reemplazarPalabra, extraerTexto } from "./02-Text.js";
 
 document.addEventListener("DOMContentLoaded", () => {
