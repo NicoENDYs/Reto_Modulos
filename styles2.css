@@ -110,6 +110,9 @@ button:active {
     margin-right: 0.5rem;
     animation: spin 1s linear infinite;
 }
+.h-custom{
+    height: 500px;
+}
 
 @keyframes spin {
     from {
