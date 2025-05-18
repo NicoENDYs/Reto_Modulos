@@ -28,8 +28,9 @@ export function  contienePalabra(texto, palabra) {
         });
     }
 }   
-export function reemplazarPalabra(texto, palabraOriginal, nuevaPalabra) {
-    return texto.replaceAll(palabraOriginal, nuevaPalabra);
+export function reemplazarPalabra(texto, palabraOriginal, nuevaPalabra){
+    const regex = new RegExp(`\\b${palabraOriginal}\\b`, 'g');
+    return texto.replace(regex, nuevaPalabra);
 }
 
 export function extraerTexto(texto, inicio, fin) {
